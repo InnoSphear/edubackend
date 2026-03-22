@@ -1,0 +1,10 @@
+export { default as College } from './College.js';
+export { default as Stream } from './Stream.js';
+export { default as Course } from './Course.js';
+export { default as Specialization } from './Specialization.js';
+export { default as Exam } from './Exam.js';
+export { default as Blog } from './Blog.js';
+export { default as News } from './News.js';
+export { default as Lead } from './Lead.js';
+export { default as User } from './User.js';
+export { default as Slider } from './Slider.js';
