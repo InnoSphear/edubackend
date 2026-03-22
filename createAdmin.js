@@ -4,14 +4,14 @@ import bcrypt from 'bcryptjs';
 import User from './models/User.js';
 
 dotenv.config();
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/education_gateway';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://innosphear_db_user:ujjwal123@cluster0.yfyiczq.mongodb.net/';
 
 async function createAdmin() {
   try {
     await mongoose.connect(MONGODB_URI);
     console.log('Connected to MongoDB');
 
-    const adminEmail = 'admin@educationgateway.com';
+    const adminEmail = 'admin@gmail.com';
     let adminOpts = await User.findOne({ email: adminEmail });
     if (!adminOpts) {
       const adminParams = new User({
