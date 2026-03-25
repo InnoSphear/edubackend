@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { fallbackBlogs as baseBlogs, fallbackColleges as baseColleges, fallbackExams as baseExams, fallbackNews as baseNews } from '../../frontend/src/data/fallbackContent.js';
+import { fallbackBlogs as baseBlogs, fallbackColleges as baseColleges, fallbackExams as baseExams, fallbackNews as baseNews } from '../data/fallbackContent.js';
 
 const cloneItems = (items, target, mapFn) => Array.from({ length: target }, (_, i) => mapFn(items[i % items.length], i));
 
@@ -58,3 +58,4 @@ export const paginate = (items = [], page = 1, limit = 10) => {
   const total = items.length;
   return { items: items.slice(start, start + currentLimit), pagination: { page: currentPage, limit: currentLimit, total, pages: Math.max(1, Math.ceil(total / currentLimit)) } };
 };
+
