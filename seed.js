@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/education_gateway';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 const streamSchema = new mongoose.Schema({
   name: String, slug: String, description: String, icon: String,

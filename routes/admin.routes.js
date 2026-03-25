@@ -22,7 +22,7 @@ router.get('/dashboard', getDashboardStats);
 
 router.get('/colleges', async (req, res) => {
   const College = (await import('../models/College.js')).default;
-  const colleges = await College.find().populate('streams', 'name').populate('courses', 'name').sort({ createdAt: -1 });
+  const colleges = await College.find().sort({ createdAt: -1 });
   res.json(colleges);
 });
 
